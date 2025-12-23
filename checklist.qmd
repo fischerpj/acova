@@ -1,0 +1,97 @@
+# Checklist
+
+Here’s a **step‑by‑step diagnostic checklist** you can use when troubleshooting radiator control boards (like the Acova IR IFW case we discussed). It’s designed to help you systematically identify faulty components without replacing parts blindly:
+
+## 🛠 Step‑by‑Step Diagnostic Checklist
+
+### 1. **Visual Inspection**
+
+-   Look for **burn marks, cracks, or bulging capacitors**.
+
+-   Check solder joints for **cold solder or cracks**.
+
+-   Verify connectors and wiring are firmly seated.
+
+### 2. **Power Supply Verification**
+
+-   Measure AC input voltage at the board.
+
+-   Test the **series resistor (R1)** for continuity and correct resistance.
+
+-   Check the **X2 safety capacitor (often 0.47 µF, 275V)** for degradation.
+
+-   Confirm the **bridge rectifier diodes** are not shorted or open.
+
+### 3. **DC Output Check**
+
+-   Measure voltage across the **main electrolytic capacitor (e.g., 25V rated)**.
+
+-   If no voltage is present, suspect the rectifier, zener diode, or switching IC.
+
+-   If voltage is unstable, check capacitors for ESR (equivalent series resistance).
+
+### 4. **Component Testing**
+
+-   **Capacitors:** Replace if bulging, leaking, or showing high ESR.
+
+-   **Resistors:** Verify values with a multimeter.
+
+-   **Relays:** Test coil resistance and switching function.
+
+-   **Zener diode:** Critical for voltage regulation—test with diode mode or replace if suspect.
+
+-   **Switching ICs (power switcher):** Replace if confirmed faulty after other checks.
+
+### 5. **Functional Test**
+
+-   After replacing suspect components, reconnect the board and test under load.
+
+-   Ensure the radiator powers on and responds to controls.
+
+-   Monitor for abnormal heating or repeated failure.
+
+### 6. **Final Verification**
+
+-   Confirm stable operation over several cycles.
+
+-   If the board works after replacing a small component (like the zener diode), note the part reference for future repairs.
+
+-   Document the repair steps for reuse.
+
+## ⚡ Practical Tips
+
+-   Always start with **low‑cost, high‑failure components** (capacitors, resistors, diodes).
+
+-   Use a **multimeter with diode and capacitance modes** for quick checks.
+
+-   Keep spare common parts (X2 capacitors, zener diodes, relays) on hand.
+
+-   Avoid replacing multiple parts at once—test after each change to isolate the root cause.
+
+## AC Voltage
+
+Yes — when I said “measure before and after the fuse or X2 filter capacitor,” I meant **on the alimentation (AC input) side of the board**. Here’s the distinction:
+
+### 🔌 Where to Measure
+
+-   **Alimentation side (AC input):**
+
+    -   This is where mains power (≈230V AC in France) enters the board.
+
+    -   You measure **AC voltage** between **L (live)** and **N (neutral)**.
+
+    -   If the fuse or X2 capacitor is in series with the input, you can check:
+
+        -   **Before the component** → should read full mains voltage.
+
+        -   **After the component** → should also read mains voltage if the part is good.
+
+        -   If voltage drops to 0 after the fuse/capacitor, that component is open/faulty.
+
+-   **Continuity check (power off):**
+
+    -   With the board disconnected from mains, use the multimeter in **ohmmeter mode**.
+
+    -   Test across the fuse or resistor in series with the X2 capacitor.
+
+    -   A good fuse shows near 0 Ω; a blown fuse shows infinite resistance.

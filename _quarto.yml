@@ -1,0 +1,23 @@
+project:
+  type: book
+
+book:
+  title: "acova"
+  author: "granPIero"
+  date: "12/4/2025"
+  chapters:
+    - index.qmd
+    - carte.qmd
+    - knowledge.qmd
+    - checklist.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

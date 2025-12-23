@@ -1,0 +1,9 @@
+---
+title: "Carte électronique"
+---
+
+Le **Condensateur 470n K 310v\~X2 339 MKP L1339** pas de 15 mm 9 x 17.5 X 15 mm est d'une capacitance de 470 nanofahrad or la mesure donne 200 nF =\> donc il est mort et coûte 1,90 € à remplacer.
+
+<https://www.rep-tronic.fr/produit/condensateur-mkp-x2-0-47%c2%b5f-470nf-474k-275v-15mm/#reviews>
+
+![Care IFW](schema-timerprog.png){width="500"}

@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "acova",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book on Repair of Acova Sèche-Serviette (750W PCE-150-050-IFW).\nhttps://www.radiateur-electrique.org/forum/post21937.html#p21937",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "carte.html",
+    "href": "carte.html",
+    "title": "1  Carte électronique",
+    "section": "",
+    "text": "Le Condensateur 470n K 310v~X2 339 MKP L1339 pas de 15 mm 9 x 17.5 X 15 mm est d’une capacitance de 470 nanofahrad or la mesure donne 200 nF =&gt; donc il est mort et coûte 1,90 € à remplacer.\nhttps://www.rep-tronic.fr/produit/condensateur-mkp-x2-0-47%c2%b5f-470nf-474k-275v-15mm/#reviews\n\n\n\nCare IFW",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Carte électronique</span>"
+    ]
+  },
+  {
+    "objectID": "knowledge.html",
+    "href": "knowledge.html",
+    "title": "2  Knowledge Summary",
+    "section": "",
+    "text": "Essential Knowledge: The forum thread explains how to troubleshoot and repair an Acova IR IFW towel radiator electronic control board. The key discovery is that the actual fault was a defective zener diode, not the relay, capacitor, or resistor initially suspected. Replacing this inexpensive component (~0.30€) restored the radiator’s functionality.\n\n2.0.1 🔑 Core Insights\n\nProblem:\n\nThe radiator’s electronic board stopped receiving power.\nInitial replacements included the relay, power switcher, and capacitor, but the issue persisted.\n\nDiagnostic Process:\n\nCommunity members suggested checking the 0.47 µF 275V X2 capacitor (C1) and the 22Ω resistor (R1) in series.\nMeasurements showed the resistor was fine, and the capacitor had already been replaced.\nAttention turned to the diode bridge and the small electrolytic capacitor (C2, 25V).\nVoltage testing across C2 was recommended to confirm power regulation.\n\nResolution:\n\nThe zener diode was identified as the defective part.\nOnce replaced, the radiator worked again.\nThe user noted they had effectively rebuilt the board, but the fault was only due to this single cheap diode.\n\nFollow-up Discussion:\n\nAnother user (Blast) confirmed similar symptoms and asked for the exact zener diode reference, since their component marking was illegible.\nThey also sought advice on safely removing the board from the casing, which is complicated by the sensor wiring.\n\n\n\n\n2.0.2 ⚡ Practical Takeaways\n\nZener diodes are critical for voltage regulation in these boards.\nA failed zener can mimic capacitor or resistor faults, leading to unnecessary part replacements.\nProper testing (especially voltage across capacitors) helps pinpoint the issue.\nEven complex electronic failures may boil down to a single inexpensive component.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Knowledge Summary</span>"
+    ]
+  },
+  {
+    "objectID": "checklist.html",
+    "href": "checklist.html",
+    "title": "3  Checklist",
+    "section": "",
+    "text": "3.1 🛠 Step‑by‑Step Diagnostic Checklist\nHere’s a step‑by‑step diagnostic checklist you can use when troubleshooting radiator control boards (like the Acova IR IFW case we discussed). It’s designed to help you systematically identify faulty components without replacing parts blindly:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Checklist</span>"
+    ]
+  },
+  {
+    "objectID": "checklist.html#stepbystep-diagnostic-checklist",
+    "href": "checklist.html#stepbystep-diagnostic-checklist",
+    "title": "3  Checklist",
+    "section": "",
+    "text": "3.1.1 1. Visual Inspection\n\nLook for burn marks, cracks, or bulging capacitors.\nCheck solder joints for cold solder or cracks.\nVerify connectors and wiring are firmly seated.\n\n\n\n3.1.2 2. Power Supply Verification\n\nMeasure AC input voltage at the board.\nTest the series resistor (R1) for continuity and correct resistance.\nCheck the X2 safety capacitor (often 0.47 µF, 275V) for degradation.\nConfirm the bridge rectifier diodes are not shorted or open.\n\n\n\n3.1.3 3. DC Output Check\n\nMeasure voltage across the main electrolytic capacitor (e.g., 25V rated).\nIf no voltage is present, suspect the rectifier, zener diode, or switching IC.\nIf voltage is unstable, check capacitors for ESR (equivalent series resistance).\n\n\n\n3.1.4 4. Component Testing\n\nCapacitors: Replace if bulging, leaking, or showing high ESR.\nResistors: Verify values with a multimeter.\nRelays: Test coil resistance and switching function.\nZener diode: Critical for voltage regulation—test with diode mode or replace if suspect.\nSwitching ICs (power switcher): Replace if confirmed faulty after other checks.\n\n\n\n3.1.5 5. Functional Test\n\nAfter replacing suspect components, reconnect the board and test under load.\nEnsure the radiator powers on and responds to controls.\nMonitor for abnormal heating or repeated failure.\n\n\n\n3.1.6 6. Final Verification\n\nConfirm stable operation over several cycles.\nIf the board works after replacing a small component (like the zener diode), note the part reference for future repairs.\nDocument the repair steps for reuse.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Checklist</span>"
+    ]
+  },
+  {
+    "objectID": "checklist.html#practical-tips",
+    "href": "checklist.html#practical-tips",
+    "title": "3  Checklist",
+    "section": "3.2 ⚡ Practical Tips",
+    "text": "3.2 ⚡ Practical Tips\n\nAlways start with low‑cost, high‑failure components (capacitors, resistors, diodes).\nUse a multimeter with diode and capacitance modes for quick checks.\nKeep spare common parts (X2 capacitors, zener diodes, relays) on hand.\nAvoid replacing multiple parts at once—test after each change to isolate the root cause.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Checklist</span>"
+    ]
+  },
+  {
+    "objectID": "checklist.html#ac-voltage",
+    "href": "checklist.html#ac-voltage",
+    "title": "3  Checklist",
+    "section": "3.3 AC Voltage",
+    "text": "3.3 AC Voltage\nYes — when I said “measure before and after the fuse or X2 filter capacitor,” I meant on the alimentation (AC input) side of the board. Here’s the distinction:\n\n3.3.1 🔌 Where to Measure\n\nAlimentation side (AC input):\n\nThis is where mains power (≈230V AC in France) enters the board.\nYou measure AC voltage between L (live) and N (neutral).\nIf the fuse or X2 capacitor is in series with the input, you can check:\n\nBefore the component → should read full mains voltage.\nAfter the component → should also read mains voltage if the part is good.\nIf voltage drops to 0 after the fuse/capacitor, that component is open/faulty.\n\n\nContinuity check (power off):\n\nWith the board disconnected from mains, use the multimeter in ohmmeter mode.\nTest across the fuse or resistor in series with the X2 capacitor.\nA good fuse shows near 0 Ω; a blown fuse shows infinite resistance.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Checklist</span>"
+    ]
+  }
+]

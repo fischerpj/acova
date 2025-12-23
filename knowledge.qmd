@@ -1,0 +1,45 @@
+# Knowledge Summary
+
+**Essential Knowledge:** The forum thread explains how to troubleshoot and repair an **Acova IR IFW towel radiator electronic control board**. The key discovery is that the actual fault was a **defective zener diode**, not the relay, capacitor, or resistor initially suspected. Replacing this inexpensive component (\~0.30€) restored the radiator’s functionality.
+
+### 🔑 Core Insights
+
+-   **Problem:**
+
+    -   The radiator’s electronic board stopped receiving power.
+
+    -   Initial replacements included the **relay**, **power switcher**, and **capacitor**, but the issue persisted.
+
+-   **Diagnostic Process:**
+
+    -   Community members suggested checking the **0.47 µF 275V X2 capacitor (C1)** and the **22Ω resistor (R1)** in series.
+
+    -   Measurements showed the resistor was fine, and the capacitor had already been replaced.
+
+    -   Attention turned to the **diode bridge** and the **small electrolytic capacitor (C2, 25V)**.
+
+    -   Voltage testing across C2 was recommended to confirm power regulation.
+
+-   **Resolution:**
+
+    -   The **zener diode** was identified as the defective part.
+
+    -   Once replaced, the radiator worked again.
+
+    -   The user noted they had effectively rebuilt the board, but the fault was only due to this single cheap diode.
+
+-   **Follow-up Discussion:**
+
+    -   Another user (*Blast*) confirmed similar symptoms and asked for the exact zener diode reference, since their component marking was illegible.
+
+    -   They also sought advice on safely removing the board from the casing, which is complicated by the sensor wiring.
+
+### ⚡ Practical Takeaways
+
+-   **Zener diodes** are critical for voltage regulation in these boards.
+
+-   A failed zener can mimic capacitor or resistor faults, leading to unnecessary part replacements.
+
+-   Proper testing (especially voltage across capacitors) helps pinpoint the issue.
+
+-   Even complex electronic failures may boil down to a **single inexpensive component**.
