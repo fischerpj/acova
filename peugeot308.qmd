@@ -1,0 +1,39 @@
+---
+title: "Peugeot308"
+---
+
+> Batterie FIAMM neuve de 2 ans morte ( 4.6 V )
+
+Avec :
+
+\- Batterie tombée à 2 V
+
+\- Batterie neuve qui chute à 12.4 V branchée  
+
+\- Clac clac clac au démarrage  
+
+\- Extinction + défaut moteur  
+
+\- Phares qui s’allument tout seuls
+
+👉 Le problème n’est pas le démarreur.  
+
+👉 Le problème est en amont : alimentation générale.
+
+Les suspects dans l’ordre :
+
+🥇 1. **Masse moteur** / masse châssis
+
+(Le plus probable avec phares qui s’allument seuls)
+
+🥈 2. Alternateur en court‑circuit
+
+(Très probable vu la batterie tombée à 2 V)
+
+🥉 3. BPGA (fusible maxi ou court‑circuit interne)
+
+(Distribue mal le +12 V → comportements erratiques)
+
+🟫 4. BSM (relais collé)
+
+(Peut allumer les phares)
