@@ -1,0 +1,269 @@
+---
+title: "Battery Full Procedure"
+---
+
+> Procedure de Test Complète après remplacement de Batterie.
+
+Voici la version complète, enrichie et parfaitement séquencée, intégrant :
+
+- les mesures au multimètre aux moments critiques,
+
+- la tentative de démarrage et ce qu’il faut observer,
+
+- les conclusions possibles selon les symptômes,
+
+- la logique BSI / Start‑Stop / clé mains‑libres / Klavkarr,
+
+- et ton cas particulier : masse via la culasse.
+
+C’est un protocole technique reproductible, comme tu les apprécies.
+
+------------------------------------------------------------------------
+
+🧰 1. Préparation
+
+Matériel
+
+- Batterie neuve (EFB/AGM selon Stop‑Stop)
+
+- Multimètre fiable
+
+- Klavkarr + câble OTG validé
+
+- Clé de 10/13
+
+- Point de masse moteur propre (culasse/support moteur)
+
+Sécurisation
+
+- Frein à main serré
+
+- Télécommande mains‑libres hors du véhicule
+
+- Portière conducteur ouverte (ne plus toucher ensuite)
+
+------------------------------------------------------------------------
+
+💤 2. Mise en sommeil du BSI (obligatoire)
+
+1. Ouvre le capot.
+
+2. Coupe tout (phares, radio, ventilation).
+
+3. Retire la télécommande du véhicule.
+
+4. Attends 3 minutes sans toucher à rien.
+
+5. Vérifie qu’aucun relais ne claque → BSI endormi.
+
+------------------------------------------------------------------------
+
+🔋 3. Déconnexion de l’ancienne batterie
+
+Ordre strict :
+
+1. Débrancher le – (masse)
+
+2. Débrancher le +
+
+3. Retirer la batterie
+
+------------------------------------------------------------------------
+
+🔧 4. Installation de la nouvelle batterie
+
+1. Place la batterie neuve.
+
+2. Branche le +.
+
+3. Branche le – via la culasse moteur (point propre, non peint).
+
+------------------------------------------------------------------------
+
+⏱️ 5. Stabilisation électrique + mesures multimètre
+
+5.1 Attendre la stabilisation
+
+- Attendre 1 minute avant toute action.
+
+- Attendre 5 minutes avant mesure à vide.
+
+5.2 Mesure tension batterie (à vide)
+
+- Mesure entre + batterie et masse culasse.
+
+- Valeur attendue : 12,5–12,8 V.
+
+Conclusions
+
+| Tension | Conclusion |
+| -------- | ------------ |
+| 12,5–12,8 V | Batterie neuve OK |
+| 12,2–12,4 V | Batterie correcte mais pas pleine |
+| < 12,0 V | Batterie insuffisamment chargée ou défaut interne |
+| > 13 V | Chargeur encore connecté / anomalie |
+
+------------------------------------------------------------------------
+
+🔌 6. Mise du contact SANS démarrer + désactivation Start‑Stop
+
+Comment mettre le contact sans démarrer
+
+1. Télécommande dans l’habitacle
+
+2. Ne pas appuyer sur la pédale de frein
+
+3. Appuyer une fois sur START → contact ON
+
+Attendre 30 secondes
+
+→ Les calculateurs se réinitialisent.
+
+Désactiver le Start‑Stop
+
+- Appuyer sur le bouton Start‑Stop OFF
+
+- Vérifier que le voyant OFF est allumé
+
+------------------------------------------------------------------------
+
+🔑 7. Vérification / resynchronisation de la télécommande
+
+Explication LOCK
+
+- LOCK = bouton de fermeture sur la télécommande mains‑libres.
+
+Test normal
+
+- Appuyer sur LOCK → si la voiture réagit, tout est OK.
+
+Si la télécommande ne répond plus
+
+1. Télécommande dans l’habitacle
+
+2. Contact ON (START sans frein)
+
+3. Maintenir LOCK 10 secondes
+
+4. Couper le contact
+
+5. Tester LOCK/UNLOCK
+
+------------------------------------------------------------------------
+
+🔍 8. Mesures multimètre AVANT tentative de démarrage
+
+8.1 Contact ON, moteur OFF
+
+Mesure entre + batterie et masse culasse.
+
+Valeurs attendues :
+
+- 12,2–12,6 V → normal
+
+- < 12,0 V → batterie faible ou masse défectueuse
+
+- Oscillations rapides → masse instable ou BSI perturbé
+
+8.2 Test de chute de tension masse (important dans ton cas)
+
+1. Pointe noire sur – batterie
+
+2. Pointe rouge sur culasse
+
+3. Contact ON
+
+Valeur attendue :
+
+- 0,00 à 0,05 V → masse parfaite
+
+- 0,06 à 0,15 V → masse acceptable
+
+- > 0,20 V → défaut de masse probable
+
+------------------------------------------------------------------------
+
+🔄 9. Tentative de démarrage + mesures + conclusions
+
+Comment démarrer
+
+- Appuyer sur START en maintenant la pédale de frein.
+
+9.1 Mesure pendant la tentative de démarrage
+
+Mesure entre + batterie et culasse.
+
+Valeurs attendues :
+
+- Chute à 9,5–10,5 V → normal
+
+- Chute à 7–9 V → batterie faible ou résistance dans la masse
+
+- Chute < 7 V → batterie HS ou court‑circuit interne
+
+- Pas de chute (reste > 12 V) → démarreur non alimenté → problème BSI, relais, ou masse
+
+9.2 Observation du comportement
+
+| Symptôme | Conclusion probable |
+| --------- | --------------------- |
+| Démarre normalement | Circuit OK |
+| Démarre lentement | Batterie faible / masse limite |
+| Clic-clic rapide | Masse mauvaise ou batterie faible |
+| Aucun bruit, tableau OK | Relais démarreur / commande BSI |
+| Aucun bruit, tableau s’éteint | Masse très mauvaise ou batterie HS |
+| Démarre puis cale | Capteurs / alimentation instable |
+
+------------------------------------------------------------------------
+
+📟 10. Séquence Klavkarr OBD2
+
+1. Contact OFF
+
+2. Brancher Klavkarr
+
+3. Brancher câble OTG → tablette
+
+4. Lancer l’application
+
+5. Mettre le contact sans démarrer
+
+6. Attendre 10 secondes
+
+7. Lire les calculateurs
+
+Mesures utiles pendant diag
+
+- Tension lue par ECU : doit être ≥ 12,0 V
+
+- Si ECU lit < 11,5 V → masse ou batterie suspecte
+
+------------------------------------------------------------------------
+
+🧪 11. Workflow complet (tableau final)
+
+| Étape | Action | Mesure / Observation | Conclusion |
+| ------ | -------- | ---------------------- | ------------ |
+| 1 | Mise en sommeil BSI | — | BSI endormi |
+| 2 | Déconnexion batterie | — | — |
+| 3 | Installation batterie | — | — |
+| 4 | Stabilisation | — | — |
+| 5 | Mesure à vide | 12,5–12,8 V | Batterie OK |
+| 6 | Contact ON | 12,2–12,6 V | Normal |
+| 7 | Désactivation Start‑Stop | Voyant OFF | OK |
+| 8 | Test télécommande | LOCK | OK / resynchro |
+| 9 | Chute tension masse | < 0,05 V | Masse OK |
+| 10 | Tentative démarrage | 9,5–10,5 V | Normal |
+| 11 | Klavkarr | Tension ECU ≥ 12 V | OK |
+
+------------------------------------------------------------------------
+
+Si tu veux aller plus loin
+
+Je peux te fournir :
+
+- un protocole complet de test du câble de masse (avec mesures moteur tournant)
+
+- un plan de diagnostic alternateur (14,2–14,8 V, ondulation, etc.)
+
+- un workflow de validation BSI/ECU après changement batterie
